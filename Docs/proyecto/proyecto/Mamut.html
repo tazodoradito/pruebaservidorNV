@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mamut Lanudo - Animales Extintos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #contenedor {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+    }
+
+    header, nav, section, aside, footer {
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .articulo {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .articulo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .extra-info {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contenedor">
+
+    <header>
+      <h1>Mamut Lanudo</h1>
+      <p>El mamut lanudo, una de las especies más emblemáticas de la prehistoria, vivió en las épocas glaciares y se extinguió hace unos 4,000 años.</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="proyecto.html">Inicio</a></li>
+        <li><a href="Ardilla.html">Ardilla</a></li>
+        <li><a href="Tortuga.html">Tortuga</a></li>
+        <li><a href="Cabra.html">Cabra</a></li>
+      </ul>
+    </nav>
+
+    <section id="contenido">
+      <article class="articulo">
+        <h2>Descripción del Mamut Lanudo</h2>
+        <img src="Imagenes/Maumt.jpeg" alt="Mamut Lanudo">
+        <p><strong>Extinto:</strong> Hace aproximadamente 4,000 años.  
+           <br><strong>Causa:</strong> Cambio climático y caza por parte de humanos prehistóricos.</p>
+        <p>El mamut lanudo era una especie de mamífero de la familia de los elefantes, adaptado al clima frío de la era glacial. Sus impresionantes colmillos podían medir hasta 4 metros y sus cuerpos estaban cubiertos por un denso pelaje.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>El mamut lanudo habitaba en grandes manadas en las regiones de Eurasia y América del Norte. Se cree que su extinción estuvo relacionada tanto con el cambio climático que redujo su hábitat como con la caza intensa por parte de los humanos prehistóricos.</p>
+        </div>
+      </article>
+
+      <article class="articulo">
+        <h2>¿Cómo vivía el Mamut Lanudo?</h2>
+        <p>El mamut lanudo vivió en un ambiente frío y cubierto de nieve, adaptándose a las bajas temperaturas con un pelaje grueso que lo protegía del frío extremo. Además de los colmillos, su gruesa capa de pelo y una capa de grasa bajo la piel le permitían sobrevivir en los climas helados.</p>
+        <p>Estas criaturas eran herbívoras, alimentándose principalmente de hierba, plantas y arbustos. Como otros animales de la época, los mamuts jugaban un papel crucial en el ecosistema, ayudando a mantener el equilibrio de la vegetación.</p>
+      </article>
+
+      <article class="articulo">
+        <h2>Últimos Mamuts</h2>
+        <p>Los últimos mamuts lanudos sobrevivieron en la isla Wrangel, en el Ártico, hasta aproximadamente el año 1650 a.C., mucho después de que la mayoría de su especie se extinguiera en el continente.</p>
+        <p>Estos mamuts fueron capaces de sobrevivir en condiciones aisladas durante miles de años, lo que los convierte en un ejemplo fascinante de cómo algunas especies pueden adaptarse y sobrevivir en condiciones extremas durante más tiempo del esperado.</p>
+      </article>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <button onclick="volverInicio()">Volver al Inicio</button>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Animales Extintos - Todos los derechos reservados</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleInfo(button) {
+      const extraInfo = button.nextElementSibling;
+      if (extraInfo.style.display === "block") {
+        extraInfo.style.display = "none";
+        button.textContent = "Leer más";
+      } else {
+        extraInfo.style.display = "block";
+        button.textContent = "Leer menos";
+      }
+    }
+
+    function volverInicio() {
+      window.location.href = "proyecto.html";
+    }
+  </script>
+
+</body>
+</html>

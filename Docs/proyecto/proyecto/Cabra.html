@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabra Montés de los Pirineos - Animales Extintos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #contenedor {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+    }
+
+    header, nav, section, footer {
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .articulo {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .articulo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .extra-info {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contenedor">
+
+    <header>
+      <h1>Cabra Montés de los Pirineos</h1>
+      <p>Una subespecie de cabra salvaje que habitó los montes del norte de España hasta su reciente extinción en el año 2000.</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="proyecto.html">Inicio</a></li>
+        <li><a href="Mamut.html">Mamut</a></li>
+        <li><a href="Ardilla.html">Ardilla</a></li>
+        <li><a href="Tortuga.html">Tortuga</a></li>
+      </ul>
+    </nav>
+
+    <section id="contenido">
+      <article class="articulo">
+        <h2>Descripción de la Cabra Montés</h2>
+        <img src="Imagenes/Cabra.jpeg" alt="Cabra Montés de los Pirineos">
+        <p><strong>Extinto:</strong> Año 2000.  
+           <br><strong>Ubicación:</strong> Pirineos (España).  
+           <br><strong>Causa:</strong> Caza excesiva y baja variabilidad genética.</p>
+        <p>La cabra montés de los Pirineos, también conocida como bucardo, era una subespecie de cabra salvaje adaptada a las duras condiciones montañosas. Su desaparición marcó un hito en la conservación de especies en Europa.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>Era una especie muy especializada, adaptada a los climas fríos y escarpados de las montañas. Su número fue disminuyendo rápidamente en el siglo XX hasta que sólo quedaba un ejemplar hembra, llamada "Celia".</p>
+        </div>
+      </article>
+
+      <article class="articulo">
+        <h2>Extinción y clonación</h2>
+        <p>En enero del año 2000, la última cabra montés fue hallada muerta por la caída de un árbol. Fue declarada oficialmente extinta ese mismo año.</p>
+        <p>Sin embargo, en 2003, científicos españoles lograron clonar a la cabra utilizando material genético de Celia. El clon nació, pero falleció a los pocos minutos por problemas pulmonares. Fue el primer caso de una especie extinta clonada, aunque sin éxito a largo plazo.</p>
+      </article>
+
+      <article class="articulo">
+        <h2>Lecciones de conservación</h2>
+        <p>La historia del bucardo es un ejemplo claro de lo que sucede cuando no se toman medidas de conservación a tiempo. Aunque existieron programas para salvarla, llegaron demasiado tarde.</p>
+        <p>Actualmente, se estudian nuevas técnicas genéticas que podrían permitir revivir especies extintas, pero la mejor forma de proteger la biodiversidad sigue siendo la conservación preventiva.</p>
+      </article>
+
+      <!-- Botón de volver al inicio con JavaScript -->
+      <div style="text-align: center; margin-top: 30px;">
+        <button onclick="volverInicio()">Volver al Inicio</button>
+      </div>
+      
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Animales Extintos - Todos los derechos reservados</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleInfo(button) {
+      const extraInfo = button.nextElementSibling;
+      if (extraInfo.style.display === "block") {
+        extraInfo.style.display = "none";
+        button.textContent = "Leer más";
+      } else {
+        extraInfo.style.display = "block";
+        button.textContent = "Leer menos";
+      }
+    }
+
+    function volverInicio() {
+      window.location.href = "proyecto.html";
+    }
+  </script>
+
+</body>
+</html>

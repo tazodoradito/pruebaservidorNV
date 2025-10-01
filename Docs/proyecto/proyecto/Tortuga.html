@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tortuga Gigante de Réunion - Animales Extintos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #contenedor {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+    }
+
+    header, nav, section, footer {
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .articulo {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .articulo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .extra-info {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contenedor">
+
+    <header>
+      <h1>Tortuga Gigante de Réunion</h1>
+      <p>Una de las especies de tortugas más grandes del Océano Índico que desapareció por la acción humana.</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="proyecto.html">Inicio</a></li>
+        <li><a href="Mamut.html">Mamut</a></li>
+        <li><a href="Ardilla.html">Ardilla</a></li>
+        <li><a href="Cabra.html">Cabra</a></li>
+      </ul>
+    </nav>
+
+    <section id="contenido">
+      <article class="articulo">
+        <h2>Descripción de la Tortuga de Réunion</h2>
+        <img src="Imagenes/Tortuga.jpeg" alt="Tortuga Gigante de Réunion">
+        <p><strong>Extinto:</strong> Siglo XVIII.  
+           <br><strong>Ubicación:</strong> Isla Reunión, Océano Índico.  
+           <br><strong>Causa:</strong> Caza por marineros y especies invasoras.</p>
+        <p>La tortuga gigante de Réunion era una tortuga terrestre de gran tamaño que vivía en la isla Reunión. Estas tortugas eran muy comunes antes de la llegada de los europeos.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>Estas tortugas eran tan numerosas que los marineros las recolectaban en grandes cantidades para alimentarse durante sus viajes. Además, con la introducción de animales invasores como ratas y cerdos, sus huevos y crías fueron depredadas, acelerando su extinción.</p>
+        </div>
+      </article>
+
+      <article class="articulo">
+        <h2>Importancia ecológica</h2>
+        <p>Las tortugas gigantes ayudaban a mantener el equilibrio ecológico de la isla, al dispersar semillas y mantener el crecimiento de vegetación controlado. Su desaparición afectó a otras especies y al ecosistema general de la isla.</p>
+      </article>
+
+      <article class="articulo">
+        <h2>¿Por qué se extinguieron?</h2>
+        <p>Durante los siglos XVII y XVIII, marineros europeos cazaron tortugas gigantes de forma indiscriminada. Su carne era una fuente fácil de alimento y podían mantenerse vivas durante meses en los barcos, lo que las hacía ideales para largas travesías.</p>
+        <p>Con el tiempo, la población fue reduciéndose hasta desaparecer por completo. Fue una extinción rápida causada casi exclusivamente por la actividad humana.</p>
+      </article>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <button onclick="volverInicio()">Volver al Inicio</button>
+      </div>
+      
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Animales Extintos - Todos los derechos reservados</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleInfo(button) {
+      const extraInfo = button.nextElementSibling;
+      if (extraInfo.style.display === "block") {
+        extraInfo.style.display = "none";
+        button.textContent = "Leer más";
+      } else {
+        extraInfo.style.display = "block";
+        button.textContent = "Leer menos";
+      }
+    }
+
+    function volverInicio() {
+      window.location.href = "proyecto.html";
+    }
+  </script>
+
+</body>
+</html>

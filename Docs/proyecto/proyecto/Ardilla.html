@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ardilla de San Pedro Mártir - Animales Extintos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #contenedor {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+    }
+
+    header, nav, section, aside, footer {
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .articulo {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .articulo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .extra-info {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contenedor">
+
+    <header>
+      <h1>Ardilla de San Pedro Mártir</h1>
+      <p>Una especie única de roedor insular que se extinguió debido al impacto humano y la introducción de especies invasoras.</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="proyecto.html">Inicio</a></li>
+        <li><a href="Mamut.html">Mamut</a></li>
+        <li><a href="Tortuga.html">Tortuga</a></li>
+        <li><a href="Cabra.html">Cabra</a></li>
+      </ul>
+    </nav>
+
+    <section id="contenido">
+      <article class="articulo">
+        <h2>Descripción de la Ardilla de San Pedro Mártir</h2>
+        <img src="Imagenes/Ardilla.jpeg" alt="Ardilla de San Pedro Mártir">
+        <p><strong>Extinto:</strong> Siglo XX.  
+           <br><strong>Ubicación:</strong> Isla San Pedro Mártir, México.  
+           <br><strong>Causa:</strong> Introducción de gatos y pérdida de hábitat.</p>
+        <p>La ardilla de San Pedro Mártir era un roedor endémico de la Isla San Pedro Mártir en México. Esta especie única vivió en un entorno aislado, lo que le dio ciertas características particulares.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>Al ser una especie insular, la ardilla de San Pedro Mártir no estaba preparada para enfrentar las amenazas que llegaron con la intervención humana, como la introducción de gatos y la destrucción de su hábitat natural. Esta falta de adaptación a nuevas amenazas fue un factor determinante en su extinción.</p>
+        </div>
+      </article>
+
+      <article class="articulo">
+        <h2>Hábitat de la Ardilla de San Pedro Mártir</h2>
+        <p>La ardilla habitaba en las zonas rocosas y de vegetación dispersa de la isla San Pedro Mártir, ubicada en el Golfo de California. El ecosistema de esta isla era muy específico y aislado, lo que hacía que la ardilla tuviera pocas amenazas naturales.</p>
+        <p>Sin embargo, la introducción de gatos y otras especies invasoras cambió por completo el equilibrio ecológico, llevando a la extinción de este roedor. La pérdida de su hábitat debido a la intervención humana también aceleró su desaparición.</p>
+      </article>
+
+      <article class="articulo">
+        <h2>Impacto Humano en la Extinción</h2>
+        <p>La principal causa de la extinción de la ardilla de San Pedro Mártir fue la introducción de gatos en la isla, que se alimentaron de los pequeños roedores. Además, la urbanización y el turismo en la isla redujeron significativamente el hábitat adecuado para estas ardillas.</p>
+        <p>Este caso es un ejemplo claro de cómo las especies invasoras, introducidas sin intención, pueden tener efectos devastadores sobre los ecosistemas locales y las especies endémicas, muchas veces sin que los humanos se den cuenta hasta que es demasiado tarde.</p>
+      </article>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <button onclick="volverInicio()">Volver al Inicio</button>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Animales Extintos - Todos los derechos reservados</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleInfo(button) {
+      const extraInfo = button.nextElementSibling;
+      if (extraInfo.style.display === "block") {
+        extraInfo.style.display = "none";
+        button.textContent = "Leer más";
+      } else {
+        extraInfo.style.display = "block";
+        button.textContent = "Leer menos";
+      }
+    }
+
+    function volverInicio() {
+      window.location.href = "proyecto.html";
+    }
+  </script>
+
+</body>
+</html>
+
