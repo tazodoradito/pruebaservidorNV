@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Animales Extintos</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #contenedor {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+    }
+
+    header, nav, section, aside, footer {
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .articulo {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .articulo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .extra-info {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    aside {
+      background-color: #eaeaea;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contenedor">
+
+    <header>
+      <h1>Animales Extintos</h1>
+      <p>Conoce más sobre especies que desaparecieron de la Tierra.</p>
+    </header>
+
+    <nav>
+      <ul>
+
+        <li><a href="Mamut.html">Mamut</a></li>
+        <li><a href="Ardilla.html">Ardilla</a></li>
+        <li><a href="Tortuga.html">Tortuga</a></li>
+        <li><a href="Cabra.html">Cabra</a></li>
+      </ul>
+    </nav>
+
+    <section id="contenido">
+
+      <!-- Artículo 1 -->
+      <article class="articulo">
+        <h2>Mamut Lanudo</h2>
+        <img src="Imagenes/Maumt.jpeg" alt="Mamut Lanudo">
+        <p><strong>Extinto:</strong> Hace unos 4,000 años.  
+           <br><strong>Causa:</strong> Cambio climático y caza por parte de humanos prehistóricos.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>El mamut lanudo vivió en Eurasia y América del Norte. Sus colmillos podían medir hasta 4 metros. Fue uno de los últimos de su especie en extinguirse.</p>
+        </div>
+      </article>
+
+      <!-- Artículo 2 -->
+      <article class="articulo">
+        <h2>Ardilla de San Pedro Mártir</h2>
+        <img src="Imagenes/Ardilla.jpeg" alt="Ardilla de San Pedro Mártir">
+        <p><strong>Extinto:</strong> Siglo XX.  
+           <br><strong>Ubicación:</strong> Isla San Pedro Mártir, México.  
+           <br><strong>Causa:</strong> Introducción de gatos y pérdida de hábitat.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>Era una especie única de roedor insular. Su desaparición es un ejemplo claro del impacto humano en ecosistemas aislados.</p>
+        </div>
+      </article>
+
+      <!-- Artículo 3 -->
+      <article class="articulo">
+        <h2>Tortuga Gigante de Réunion</h2>
+        <img src="Imagenes/Tortuga.jpeg" alt="Tortuga Gigante de Réunion">
+        <p><strong>Extinto:</strong> Siglo XVIII.  
+           <br><strong>Ubicación:</strong> Isla Reunión, Océano Índico.  
+           <br><strong>Causa:</strong> Caza por marineros y especies invasoras.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>Estas tortugas eran tan abundantes que los marineros las usaban como fuente de comida fresca en sus viajes.</p>
+        </div>
+      </article>
+
+      <!-- Artículo 4 -->
+      <article class="articulo">
+        <h2>Cabra montés de los Pirineos</h2>
+        <img src="Imagenes/Cabra.jpeg" alt="Cabra montés de los Pirineos">
+        <p><strong>Extinto:</strong> Año 2000.  
+           <br><strong>Ubicación:</strong> Pirineos (España).  
+           <br><strong>Causa:</strong> Caza excesiva y baja variabilidad genética.</p>
+        <button onclick="toggleInfo(this)">Leer más</button>
+        <div class="extra-info">
+          <p>Fue el primer animal extinto en ser clonado. Aunque el clon nació, murió poco después debido a complicaciones pulmonares.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <aside>
+      <h2>¿Sabías que...?</h2>
+      <p>Más del 99% de las especies que han existido ya están extintas.</p>
+      <form>
+        <input type="text" placeholder="Buscar...">
+        <input type="submit" value="Buscar">
+      </form>
+      <br>
+      <button onclick="alert('Gracias por visitar nuestro sitio de aprendizaje')">Haz clic aquí</button>
+    </aside>
+
+    <footer>
+      Campos Lopez Angel Yahel, Aaron Diaz Jesus, Reyes Rosales Caleb &copy; 2025
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleInfo(button) {
+      const extraInfo = button.nextElementSibling;
+      if (extraInfo.style.display === "block") {
+        extraInfo.style.display = "none";
+        button.textContent = "Leer más";
+      } else {
+        extraInfo.style.display = "block";
+        button.textContent = "Leer menos";
+      }
+    }
+  </script>
+
+</body>
+</html>
